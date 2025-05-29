@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const userRouter_1 = __importDefault(require("./userRoutes/userRouter"));
 const adminRouter_1 = __importDefault(require("./adminRoutes/adminRouter"));
-const prisma_1 = require('@prisma/client');;
+const prisma_1 = require("../../generated/prisma");
 const prisma = new prisma_1.PrismaClient();
 const indexRouter = express_1.default.Router();
 indexRouter.get('/working', (req, res) => {
