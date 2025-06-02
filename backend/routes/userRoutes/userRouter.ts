@@ -315,7 +315,7 @@ userRouter.get('/search/:text',userMiddleware,async(req,res)=>{
     const site:sites[] = await prisma.site.findMany({
       where:{
         place:{
-          contains:text,
+          startsWith:text,
           mode:'insensitive'
         }
       }
